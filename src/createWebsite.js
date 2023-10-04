@@ -1,4 +1,6 @@
-export default function createHeader() {
+import loadHome from './home.js';
+
+function createHeader() {
     const navbar = document.createElement('div');
     const header = document.createElement('h1');
     const list = document.createElement('ul');
@@ -19,4 +21,15 @@ export default function createHeader() {
     navbar.appendChild(list);
 
     return navbar;
+}
+
+function createHome() {
+    const home = loadHome();
+    return home;
+}
+
+export default function loadWebsite() {
+    const content = document.getElementById('content'); 
+    content.appendChild(createHeader());
+    content.appendChild(createHome());
 }
