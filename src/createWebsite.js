@@ -1,5 +1,6 @@
 import loadHome from './home.js';
 import loadMenu from './menu.js';
+import loadContact from './contact.js';
 import '../dist/style.css';
 
 function createHeader() {
@@ -43,4 +44,5 @@ export default function loadWebsite() {
     content.appendChild(createHeader());
     content.appendChild(createHome());
     content.appendChild(createMenu());
+    content.appendChild(loadContact());
 }
