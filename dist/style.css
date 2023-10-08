@@ -5,9 +5,13 @@
     text-align: center;
 }
 
+body {
+    min-width: 300px;
+}
+
 img {
-    max-height: 300px;
-    max-width: 300px;
+    height: 300px;
+    width: 300px;
 }
 
 .header {
@@ -19,22 +23,33 @@ img {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 5px;
-    padding-left: 20%;
-    padding-right: 20%;
+    margin: 0 20%;
+    min-width: 300px;
 }
 
 .menu-item {
-    width: 30%;
+    width: 45%;
+    margin-bottom: 50px;
+}
+
+.phone-number {
+    margin-top: 15px;
+    font-size: 1.25rem;
 }
 
 .item-name {
     margin: 10px 0;
 }
 
+.contact {
+    margin-top: 5%;
+}
+
 @media only screen and (max-width: 1000px) {
     .menu {
         flex-direction: column;
         justify-content: center;
+        margin: 0;
     }
 
     .menu-item {
