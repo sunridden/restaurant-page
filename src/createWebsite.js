@@ -14,15 +14,13 @@ function createHeader() {
     headerBtns.classList.add("header-btns");
 
     const homeBtn = document.createElement('btn');
-    homeBtn.classList.add('homeBtn');
-    
+    homeBtn.classList.add('homeBtn', 'btn');
+
     const menuBtn = document.createElement('btn');
-    menuBtn.classList.add('menuBtn');
+    menuBtn.classList.add('menuBtn', 'btn');
 
     const contactBtn = document.createElement('btn');
-    contactBtn.classList.add("contactBtn");
-
-    document.getElementById
+    contactBtn.classList.add('contactBtn', 'btn');
 
     header.textContent = "ke's cuisine";
     homeBtn.textContent = "Home";
@@ -55,4 +53,30 @@ export default function loadWebsite() {
     content.appendChild(createHome());
     content.appendChild(createMenu());
     content.appendChild(loadContact());
+
+    // Tab-browsing logic to display page based on what button is selected
+    const btns = document.querySelectorAll('.btn');
+    btns.forEach((button) => {
+        button.addEventListener('click', buttonInput);
+    });
+    
+    const homePage = document.querySelector('.home-page');
+    const menuPage = document.querySelector('.menu');
+    const contactPage = document.querySelector('.contact');
+    
+    function buttonInput() {
+        if (this.classList.contains('homeBtn')) {
+            homePage.style.display = 'block';
+            menuPage.style.display = 'none';
+            contactPage.style.display = 'none';
+        } else if (this.classList.contains('menuBtn')) {
+            homePage.style.display = 'none';
+            menuPage.style.display = 'flex';
+            contactPage.style.display = 'none';
+        } else if (this.classList.contains('contactBtn')) {
+            homePage.style.display = 'none';
+            menuPage.style.display = 'none';
+            contactPage.style.display = 'block';
+        }
+    }
 }
