@@ -14,17 +14,24 @@ function createHeader() {
     headerBtns.classList.add("header-btns");
 
     const homeBtn = document.createElement('btn');
+    homeBtn.classList.add('homeBtn');
+    
     const menuBtn = document.createElement('btn');
-    const aboutBtn = document.createElement('btn');
+    menuBtn.classList.add('menuBtn');
+
+    const contactBtn = document.createElement('btn');
+    contactBtn.classList.add("contactBtn");
+
+    document.getElementById
 
     header.textContent = "ke's cuisine";
     homeBtn.textContent = "Home";
     menuBtn.textContent = "Menu";
-    aboutBtn.textContent = "About";
+    contactBtn.textContent = "Contact";
 
     headerBtns.appendChild(homeBtn);
     headerBtns.appendChild(menuBtn);
-    headerBtns.appendChild(aboutBtn);
+    headerBtns.appendChild(contactBtn);
 
     navbar.appendChild(header);
     navbar.appendChild(headerBtns);
