@@ -5,26 +5,29 @@ import '../dist/style.css';
 
 function createHeader() {
     const navbar = document.createElement('div');
+    navbar.classList.add("navbar");
 
     const header = document.createElement('h1');
     header.classList.add("header");
 
-    const list = document.createElement('ul');
-    const homeBtn = document.createElement('li');
-    const menuBtn = document.createElement('li');
-    const aboutBtn = document.createElement('li');
+    const headerBtns = document.createElement('nav');
+    headerBtns.classList.add("header-btns");
+
+    const homeBtn = document.createElement('btn');
+    const menuBtn = document.createElement('btn');
+    const aboutBtn = document.createElement('btn');
 
     header.textContent = "ke's cuisine";
     homeBtn.textContent = "Home";
     menuBtn.textContent = "Menu";
     aboutBtn.textContent = "About";
 
-    list.appendChild(homeBtn);
-    list.appendChild(menuBtn);
-    list.appendChild(aboutBtn);
+    headerBtns.appendChild(homeBtn);
+    headerBtns.appendChild(menuBtn);
+    headerBtns.appendChild(aboutBtn);
 
     navbar.appendChild(header);
-    navbar.appendChild(list);
+    navbar.appendChild(headerBtns);
 
     return navbar;
 }

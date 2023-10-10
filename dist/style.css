@@ -14,8 +14,30 @@ img {
     width: 300px;
 }
 
+btn {
+    font-size: 1.25rem;
+}
+
 .header {
     margin: 25px;
+}
+
+.header-btns {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.navbar {
+    margin: 35px;
+}
+
+.home-text {
+    font-size: 1.25rem;
+}
+
+.home-img {
+    margin: 30px;
 }
 
 .menu {
